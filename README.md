@@ -27,8 +27,9 @@ GWAS summary statistics using suitable software (e.g. –linear function in PLIN
 - Key flags: --clump-kb, --clump-r2, --clump-p, --bar-levels 
 - PRSice will compute PRS at each threshold and test association with the phenotype
 - For binary traits, it will report Nagelkerke R² / AUC; for quantitative traits, R²
-	```
-    --clump-kb 250kb \
---clump-p 1.000000 \
-    --clump-r2 0.100000
+
+```
+ --clump-kb 250kb \
+ --clump-p 1.000000 \
+ --clump-r2 0.100000
 ```
