@@ -8,7 +8,7 @@ GWAS summary statistics using suitable software (e.g. –linear function in PLIN
 - Target file should be PLINK –bfile (target.bed, target.bim, target.fam). Also note that pgen file can also be used. 
 - Phenotype should have three columns (FID IID PHENO)
 - Covariate file: FID IID + covariates (e.g., age, sex, PC1–PC10)
-- $\color{red}{Ensure FID/IID match between PLINK, phenotype, and covariate files}$
+- $\color{red}{Ensure FID and IID match between PLINK, phenotype, and covariate files}$
 # Step3: Run Basic PRSice command 
 ```
 ./PRSice_linux \
