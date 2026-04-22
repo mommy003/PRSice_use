@@ -9,7 +9,7 @@ GWAS summary statistics using suitable software (e.g. –linear function in PLIN
 - Phenotype should have three columns (FID IID PHENO)
 - Covariate file: FID IID + covariates (e.g., age, sex, PC1–PC10)
 - $\color{red}{Ensure FID/IID match between PLINK, phenotype, and covariate files}$
-# Step3: Run Basic PRSice command
+# Step3: Run Basic PRSice command 
 ```
 ./PRSice_linux \
 --base TOY_BASE_GWAS.assoc \
