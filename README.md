@@ -1,7 +1,6 @@
 # PRSice_use
 
-To download latest version of PRSice please go to and transfer the folder in your working directory 
-https://choishingwan.github.io/PRSice/ 
+To download latest version of PRSice please go to https://choishingwan.github.io/PRSice/ and transfer the folder in your working directory
 # Step1: Prepare base (reference) 
 GWAS summary statistics using suitable software (e.g. –linear function in PLINK). Please note that, PRSice needs a clean GWAS summary file with consistent SNP IDs and effect alleles. Typical columns names required as SNP, A1, A2, BETA/OR, P, N. Compress and index GWAS file if large (e.g., bgzip, tabix) for convenience. 
 # Step2: Prepare target genotype and phenotype files
