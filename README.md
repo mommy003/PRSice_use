@@ -34,6 +34,6 @@ GWAS summary statistics using suitable software (e.g. –linear function in PLIN
 ```
 # Output
 The command will generate three output file 
-- test.summary (High‑level summary of the run. Contains: Number of SNPs in base and target, Clumping parameters, Best P‑value threshold, R² / pseudo‑R², p‑value, sample size)
+- test.summary 
 - test.best
 - test.all.score
