@@ -21,7 +21,7 @@ GWAS summary statistics using suitable software (e.g. –linear function in PLIN
 ```
 
 
-## Aforesaid basic precice command will automatically enable clumping and P value thresholding
+## Aforesaid basic PRSice command will automatically enable clumping and P value thresholding
 - Use PRSice’s built in clumping and multiple thresholds to scan prediction performance.
 - Key flags: --clump-kb, --clump-r2, --clump-p, --bar-levels 
 - PRSice will compute PRS at each threshold and test association with the phenotype
@@ -32,3 +32,8 @@ GWAS summary statistics using suitable software (e.g. –linear function in PLIN
  --clump-p 1.000000 \
  --clump-r2 0.100000
 ```
+# Output
+The command will generate three output file 
+- test.summary (High‑level summary of the run. Contains: Number of SNPs in base and target, Clumping parameters, Best P‑value threshold, R² / pseudo‑R², p‑value, sample size)
+- test.best
+- test.all.score
