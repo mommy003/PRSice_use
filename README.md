@@ -25,7 +25,7 @@ User can include covariate in the model to estimate PGS/PRS by adding following 
 --cov-col age,sex,PC1-PC10 \
 ```
 
-## Aforesaid basic PRSice vasic (without covariate) command will automatically enable clumping and P value thresholding
+## Aforementioned basic PRSice vasic (without covariate) command will automatically enable clumping and P value thresholding
 - Use PRSice’s built in clumping and multiple thresholds to scan prediction performance.
 - Key flags: --clump-kb, --clump-r2, --clump-p, --bar-levels 
 - PRSice will compute PRS at each threshold and test association with the phenotype
