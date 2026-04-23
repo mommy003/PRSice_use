@@ -19,7 +19,11 @@ GWAS summary statistics using suitable software (e.g. –linear function in PLIN
 --fastscore \
 --out test
 ```
-
+User can include covariate in the model to estimate PGS/PRS by adding following flags
+```
+--cov covar.txt \
+--cov-col age,sex,PC1-PC10 \
+```
 
 ## Aforesaid basic PRSice command will automatically enable clumping and P value thresholding
 - Use PRSice’s built in clumping and multiple thresholds to scan prediction performance.
