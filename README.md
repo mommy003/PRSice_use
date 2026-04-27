@@ -53,12 +53,16 @@ rs1000031 A G 0.335671 -0.01188 0.03502 0.7345 346070
 ## Step3: Run Basic PRSice command 
 ```
 ./PRSice_linux \
---base /QRISdata/Q9427/ISG2026/gwas2.assoc.linear \
+--a1 A1 \
+--base /QRISdata/Q9427/ISG2026/ukb_matched.ma \
 --target /QRISdata/Q9427/ISG2026/validation_1kg/1000G_phase3.eur \
 --pheno /QRISdata/Q9427/ISG2026/validation_1kg/1kg.eur.simulated.phen \
---stat BETA \
---fastscore \
---out output
+--beta  \
+--pvalue p \
+--stat b \
+--binary-target F \
+--fastscore  \
+--out output 
 ```
 User can include covariate in the model to estimate PGS/PRS by adding following flags
 ```
