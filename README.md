@@ -18,7 +18,7 @@ Imagine we are part of a research team studying a quantitative trait (e.g., heig
 
 
 ## Step1: Prepare base GWAS (reference) 
-GWAS summary statistics using suitable software (e.g. –linear function in $\color{red}{PLINK}$). Please note that, PRSice needs a clean GWAS summary file with consistent SNP IDs and effect alleles. Typical columns names required as \color{red}{SNP}$, \color{red}{A1}$, SNP, A1, A2, BETA/OR, P, N. Compress and index GWAS file if large (e.g., bgzip, tabix) for convenience. PLINK output could easily be used for culmping and theasholding. Please see the following output as an example
+GWAS summary statistics using suitable software (e.g. –linear function in $\color{red}{PLINK}$). Please note that, PRSice needs a clean GWAS summary file with consistent SNP IDs and effect alleles. Typical columns names required as $\color{red}{SNP}$, $\color{red}{A1}$, SNP, A1, A2, BETA/OR, P, N. Compress and index GWAS file if large (e.g., bgzip, tabix) for convenience. PLINK output could easily be used for culmping and theasholding. Please see the following output as an example
 
 ```
 CHR     SNP              BP      A1      TEST    NMISS   BETA    STAT    P
