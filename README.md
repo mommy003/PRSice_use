@@ -5,10 +5,10 @@ Imagine we are part of a research team studying a quantitative trait (e.g., heig
 
 ### Learning outcome
 - We want to predict a phenotype using genome‑wide SNP effects.
-- We would like to learn clumping, thresholding, scoring, and model evaluation.”
-- We will solve a real problem: build a PRS and evaluate its predictive power.”
+- We would like to learn clumping, thresholding, scoring, and model evaluation.
+- We will solve a real problem: build a PRS and evaluate its predictive power.
 
-### We shold think about 
+### We should think about 
 - What information do we need from the base GWAS?
 - Why do we need clumping?
 - Why do we test multiple P‑value thresholds?
