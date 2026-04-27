@@ -112,6 +112,16 @@ HG00103 HG00103 Yes 0.0024911562
 HG00105 HG00105 Yes 0.0062098392
 ```
 
+## Step4: Evaluate Prediction in R
+```
+prs <- read.table("output.best", header=TRUE)
+pheno <- read.table("1kg.eur.simulated.phen", header=TRUE)
+merged <- merge(prs, pheno, by=c("FID","IID"))
+
+summary(lm(pheno ~ PRS, data=merged))
+
+```
+
 # Q & A
 ### What does clumping do?
 Clumping removes SNPs that are in high linkage disequilibrium (LD) with each other, keeping only the most significant SNP in each LD block. So, Clumping keeps independent SNPs and removes correlated ones.
