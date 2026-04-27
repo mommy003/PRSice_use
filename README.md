@@ -68,7 +68,7 @@ User can include covariate in the model to estimate PGS/PRS by adding following 
 ```
 ## Output
 The command will generate three output file 
-- output.prsice
+### output.prsice
 ```
 Pheno   Set     Threshold       R2      P       Coefficient     Standard.Error  Num_SNP
 -       Base    0.05    0.00281305      0.235537        1.12387 0.946304        1
@@ -77,7 +77,11 @@ Pheno   Set     Threshold       R2      P       Coefficient     Standard.Error  
 -       Base    0.5     9.20341e-05     0.830224        0.794616        3.70406 7
 -       Base    1       4.9775e-06      0.960232        0.275718        5.5268  11
 ```
-- - output.summary
+### output.summary
+```
+Phenotype       Set     Threshold       PRS.R2  Full.R2 Null.R2 Prevalence      Coefficient     Standard.Error  P       Num_SNP
+-       Base    0.05    0.00281305      0.00281305      0       -       1.12387 0.946304        0.235537        1
+```
 - output.best
 - output.log
 - output.mismatch
