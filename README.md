@@ -14,7 +14,7 @@ Imagine we are part of a research team studying a quantitative trait (e.g., heig
 - Why do we test multiple P‑value thresholds?
 
 
-## To download latest version of PRSice please go to https://choishingwan.github.io/PRSice/ and transfer the folder in your working directory
+### To download latest version of PRSice please go to https://choishingwan.github.io/PRSice/ and transfer the folder in your working directory
 
 
 ## Step1: Prepare base (reference) 
