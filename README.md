@@ -4,9 +4,9 @@
 Imagine we are part of a research team studying a quantitative trait (e.g., height). We have GWAS summary statistics from a large external study, and you have genotype + phenotype data for a cohort (lets say target dataset). Now the task is to build a polygenic risk score (PRS) and evaluate how well it predicts the trait in your cohort.
 
 ### Learning outcome
-- We want to predict a phenotype using genome‑wide SNP effects.
-- We would like to learn clumping, thresholding, scoring, and model evaluation.
-- We will solve a real problem: build a PRS and evaluate its predictive power.
+- Participants will able to predict a phenotype using genome‑wide SNP effects.
+- Participants will able to learn clumping, thresholding, scoring, and model evaluation.
+- Participants will able to solve a real problem: build a PRS and evaluate its predictive power.
 
 ### We should think about 
 - What information do we need from the base GWAS?
@@ -113,13 +113,4 @@ HG00101 HG00101 Yes -0.00330218224
 HG00102 HG00102 Yes 0.00306305513
 HG00103 HG00103 Yes 0.0024911562
 HG00105 HG00105 Yes 0.0062098392
-HG00106 HG00106 Yes -0.00403319296
-HG00107 HG00107 Yes -0.00251546708
-HG00108 HG00108 Yes -0.0073191807
-HG00109 HG00109 Yes -0.00161807044
-HG00110 HG00110 Yes -0.00543786371
-HG00111 HG00111 Yes 0.00819337672
-HG00112 HG00112 Yes -0.00323169985
-HG00113 HG00113 Yes -0.00656213629
-HG00114 HG00114 Yes 0.000280436447
 ```
