@@ -95,7 +95,7 @@ Pheno   Set     Threshold       R2      P       Coefficient     Standard.Error  
 ### output.summary
 ```
 Phenotype       Set     Threshold       PRS.R2  Full.R2 Null.R2 Prevalence      Coefficient     Standard.Error  P       Num_SNP
--               Base    0.001   0.460142        0.460142        0       -       643.511 31.172  5.26825e-69     1306
+-               Base    0.001   0.460142        0.460142        0       -       643.511            31.172  5.26825e-69     1306
 
 
 ```
