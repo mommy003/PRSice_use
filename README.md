@@ -99,7 +99,7 @@ Phenotype       Set     Threshold       PRS.R2  Full.R2 Null.R2 Prevalence      
 
 
 ```
-- output.best
+### output.best
 ```
 FID IID In_Regression PRS
 HG00097 HG00097 Yes -0.00209781776
