@@ -142,4 +142,3 @@ This leads to underfitting and lower R².
 - Compare R² and number of SNPs.
 - Does prediction improve or worsen?”
 - Try Binary phenotype
-- 
