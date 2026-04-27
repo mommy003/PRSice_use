@@ -144,11 +144,10 @@ This leads to underfitting and lower R².
 - PRSice automates clumping + thresholding
 - R² peaks at the threshold where the PRS includes enough true causal SNPs to capture polygenicity, but not so many null SNPs that noise overwhelms the signal.
 - PRS performance depends on genetic architecture
-- Interpretation is as important as computation
 - PRS is a baseline — not the final model
 
 ### Practice task
-- Change the clumping parameters and re‑run PRSice.
+- Change the clumping and p value threasholding parameters and re‑run PRSice.
 - Compare R² and number of SNPs.
-- Does prediction improve or worsen?”
+- Check prediction improve or worsen and try to interprete
 - Try Binary phenotype
