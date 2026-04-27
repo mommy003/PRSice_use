@@ -68,6 +68,7 @@ User can include covariate in the model to estimate PGS/PRS by adding following 
 ```
 ## Output
 The command will generate three output file 
-- output.summary 
+- output.summary
+  
 - output.best
 - output.all.score
