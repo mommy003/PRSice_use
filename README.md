@@ -1,5 +1,19 @@
 # PRSice_use
 
+# PBL Scenario (Tell this to your group)
+Imagine we are part of a research team studying a quantitative trait (e.g., height). We have GWAS summary statistics from a large external study, and you have genotype + phenotype data for a cohort (lets say target dataset). Now the task is to build a polygenic risk score (PRS) and evaluate how well it predicts the trait in your cohort.
+
+### Learning outcome
+- We want to predict a phenotype using genome‑wide SNP effects.
+- We would like to learn clumping, thresholding, scoring, and model evaluation.”
+- We will solve a real problem: build a PRS and evaluate its predictive power.”
+
+### We shold think about 
+- What information do we need from the base GWAS?
+- Why do we need clumping?
+- Why do we test multiple P‑value thresholds?
+
+
 To download latest version of PRSice please go to https://choishingwan.github.io/PRSice/ and transfer the folder in your working directory
 # Step1: Prepare base (reference) 
 GWAS summary statistics using suitable software (e.g. –linear function in PLINK). Please note that, PRSice needs a clean GWAS summary file with consistent SNP IDs and effect alleles. Typical columns names required as SNP, A1, A2, BETA/OR, P, N. Compress and index GWAS file if large (e.g., bgzip, tabix) for convenience. 
