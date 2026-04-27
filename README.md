@@ -41,12 +41,12 @@ CHR     SNP     BP      A1      TEST    NMISS   BETA    STAT    P
 ## Step3: Run Basic PRSice command 
 ```
 ./PRSice_linux \
---base TOY_BASE_GWAS.assoc \
---target TOY_TARGET_DATA \
---pheno TOY_TARGET_DATA.pheno \
+--base /QRISdata/Q9427/ISG2026/gwas2.assoc.linear \
+--target /QRISdata/Q9427/ISG2026/validation_1kg/1000G_phase3.eur \
+--pheno /QRISdata/Q9427/ISG2026/validation_1kg/1kg.eur.simulated.phen \
 --stat BETA \
 --fastscore \
---out test
+--out output
 ```
 User can include covariate in the model to estimate PGS/PRS by adding following flags
 ```
@@ -67,6 +67,6 @@ User can include covariate in the model to estimate PGS/PRS by adding following 
 ```
 ## Output
 The command will generate three output file 
-- test.summary 
-- test.best
-- test.all.score
+- output.summary 
+- output.best
+- output.all.score
