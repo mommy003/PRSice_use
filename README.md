@@ -1,4 +1,4 @@
-# PRSice_use
+# Clumping and Threasholding using PRSice
 
 # PBL Scenario 
 Imagine we are part of a research team studying a quantitative trait (e.g., height). We have GWAS summary statistics from a large external study, and you have genotype + phenotype data for a cohort (lets say target dataset). Now the task is to build a polygenic risk score (PRS) and evaluate how well it predicts the trait in your cohort.
