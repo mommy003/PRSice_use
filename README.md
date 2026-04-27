@@ -12,7 +12,7 @@ Imagine we are part of a research team studying a quantitative trait (e.g., heig
 - What information do we need from the base GWAS?
 - Why do we need clumping?
 - Why do we test multiple P‑value thresholds?
-
+- How much variance explained?
 
 ### To download latest version of PRSice please go to https://choishingwan.github.io/PRSice/ and transfer the folder in your working directory
 
