@@ -33,6 +33,18 @@ CHR     SNP     BP      A1      TEST    NMISS   BETA    STAT    P
 1       rs11260549      1111657 A       ADD     3000    0.1459  0.2553  0.7985
 1       rs9729550       1125105 C       ADD     2985    -0.547  -1.325  0.1854
 ```
+In our practice will use GWAS summary statistics with the following format
+```
+SNP A1 A2 freq b se p N
+rs10000010 C T 0.482739 0.01369 0.03341 0.682 340643
+rs1000007 C T 0.278497 -0.008524 0.03699 0.8177 345363
+rs10000141 A G 0.090938 0.1598 0.05742 0.005391 347975
+rs1000016 G A 0.066432 -0.0627 0.06689 0.3486 341770
+rs10000169 C T 0.250075 -0.03871 0.03808 0.3094 348501
+rs10000272 C T 0.056848 0.09971 0.07128 0.1618 348501
+rs10000282 T C 0.088018 -0.0006234 0.05836 0.9915 347413
+rs1000031 A G 0.335671 -0.01188 0.03502 0.7345 346070
+```
 ## Step2: Prepare target genotype and phenotype files
 - Target file should be PLINK –bfile (target.bed, target.bim, target.fam). Also note that pgen file can also be used. 
 - Phenotype should have three columns (FID IID PHENO)
