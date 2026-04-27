@@ -17,14 +17,14 @@ Imagine we are part of a research team studying a quantitative trait (e.g., heig
 ## To download latest version of PRSice please go to https://choishingwan.github.io/PRSice/ and transfer the folder in your working directory
 
 
-# Step1: Prepare base (reference) 
+## Step1: Prepare base (reference) 
 GWAS summary statistics using suitable software (e.g. –linear function in PLINK). Please note that, PRSice needs a clean GWAS summary file with consistent SNP IDs and effect alleles. Typical columns names required as SNP, A1, A2, BETA/OR, P, N. Compress and index GWAS file if large (e.g., bgzip, tabix) for convenience. 
-# Step2: Prepare target genotype and phenotype files
+## Step2: Prepare target genotype and phenotype files
 - Target file should be PLINK –bfile (target.bed, target.bim, target.fam). Also note that pgen file can also be used. 
 - Phenotype should have three columns (FID IID PHENO)
 - Covariate file: FID IID + covariates (e.g., age, sex, PC1–PC10)
 - $\color{red}{Important}$ Ensure FID and IID match between PLINK, phenotype, and covariate files
-# Step3: Run Basic PRSice command 
+## Step3: Run Basic PRSice command 
 ```
 ./PRSice_linux \
 --base TOY_BASE_GWAS.assoc \
@@ -52,7 +52,7 @@ User can include covariate in the model to estimate PGS/PRS by adding following 
  --clump-p 1.000000 \
  --clump-r2 0.100000
 ```
-# Output
+## Output
 The command will generate three output file 
 - test.summary 
 - test.best
