@@ -111,3 +111,35 @@ HG00102 HG00102 Yes 0.00306305513
 HG00103 HG00103 Yes 0.0024911562
 HG00105 HG00105 Yes 0.0062098392
 ```
+
+# Q & A
+### What does clumping do?
+Clumping removes SNPs that are in high linkage disequilibrium (LD) with each other, keeping only the most significant SNP in each LD block. So, Clumping keeps independent SNPs and removes correlated ones.
+
+### What does P‑value thresholding do?
+Thresholding selects SNPs based on their GWAS P‑value, creating multiple PRS at different significance cutoffs. Thresholding tests how many SNPs to include in the PRS.
+
+### Why does R² peak at a certain threshold?
+Because moderate P‑value thresholds include enough true causal SNPs without adding too much noise.
+This is the point where signal is maximized relative to noise.
+
+### Why does prediction drop at very loose thresholds?
+Loose thresholds include too many non‑associated SNPs, adding noise that dilutes the true genetic signal, causing R² to fall.
+
+### Why does too strict a threshold reduce prediction?
+Strict thresholds include only genome‑wide significant SNPs, missing thousands of small‑effect variants.
+This leads to underfitting and lower R².
+
+# Wrap‑Up
+- PRSice automates clumping + thresholding
+- R² peaks at the threshold where the PRS includes enough true causal SNPs to capture polygenicity, but not so many null SNPs that noise overwhelms the signal.
+- PRS performance depends on genetic architecture
+- Interpretation is as important as computation
+- PRS is a baseline — not the final model
+
+### Practice task
+- Change the clumping parameters and re‑run PRSice.
+- Compare R² and number of SNPs.
+- Does prediction improve or worsen?”
+- Try Binary phenotype
+- 
