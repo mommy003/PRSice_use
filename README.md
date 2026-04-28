@@ -12,7 +12,7 @@ Imagine we are part of a research team studying a quantitative trait (e.g., heig
 - What information do we need from the base GWAS?
 - Why do we need clumping?
 - Why do we test multiple P‑value thresholds?
-- How much variance explained?
+- How much variance explained (R²)?
 
 ### To download latest version of PRSice please go to https://choishingwan.github.io/PRSice/ and transfer the folder in your working directory
 
@@ -146,7 +146,7 @@ This leads to underfitting and lower R².
 - PRS performance depends on genetic architecture
 - PRS is a baseline — not the final model
 
-### Practice task
+### Furher practice task
 - Change the clumping and p value threasholding parameters and re‑run PRSice.
 - Compare R² and number of SNPs.
 - Check prediction improve or worsen and try to interprete
