@@ -21,7 +21,7 @@ Imagine we are part of a research team studying a quantitative trait (e.g., heig
 GWAS summary statistics using suitable software (e.g. –linear function in $\color{red}{PLINK}$). Please note that, PRSice needs a clean GWAS summary file with consistent SNP IDs and effect alleles. Typical columns names required as $\color{blue}{SNP}$, $\color{blue}{A1}$, $\color{blue}{A2}$, $\color{blue}{BETA/OR}$, $\color{blue}{P}$, $\color{blue}{N}$. Compress and index GWAS file if large (e.g., bgzip, tabix) for convenience. GWAS output from PLINK could easily be used for culmping and theasholding when using PRSice. Please see the following output as an example
 
 ```
-CHR     SNP              BP      A1      TEST    NMISS   BETA    STAT    P
+CHR     SNP              BP     A1      TEST    NMISS   BETA    STAT    P
 1       rs3934834       995669  T       ADD     2973    0.7677  1.426   0.1541
 1       rs3737728       1011278 A       ADD     2998    -0.4979 -1.195  0.2321
 1       rs6687776       1020428 T       ADD     2997    0.3382  0.6506  0.5154
