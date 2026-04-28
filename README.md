@@ -113,6 +113,7 @@ HG00105 HG00105 Yes 0.0062098392
 ```
 ### In your working directory you will have output.mismatch and output.log files. Please have a look to these files.
 - The ouput.mismatch file lists SNPs removed because their alleles didn’t match between the base GWAS and the target genotype data.
+- The output.log file is simply a record of what a program did while it was running. 
 
 
 ## Step4: Evaluate Prediction in R
@@ -144,13 +145,13 @@ Strict thresholds include only genome‑wide significant SNPs, missing thousands
 This leads to underfitting and lower R².
 
 # Wrap‑Up
-- PRSice automates clumping + thresholding
-- R² peaks at the threshold where the PRS includes enough true causal SNPs to capture polygenicity, but not so many null SNPs that noise overwhelms the signal.
-- PRS performance depends on genetic architecture
-- PRS is a baseline — not the final model
+- PRSice automates clumping + thresholding.
+- R² peaks at the threshold where the PRS includes enough true causal SNPs to capture polygenicity.
+- PRS performance depends on genetic architecture.
+- PRS is a baseline — not the final model.
 
 ### Furher practice task
 - Change the clumping and p value threasholding parameters and re‑run PRSice.
 - Compare R² and number of SNPs.
-- Check prediction improve or worsen and try to interprete
-- Try Binary phenotype
+- Check prediction improve or worsen and try to interprete.
+- Try Binary phenotype.
