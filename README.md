@@ -80,7 +80,7 @@ User can include covariate in the model to estimate PGS/PRS by adding following 
 --clump-r2 0.100000
 ```
 ## Output
-The command will generate three output file 
+The command will generate following output file 
 ### output.prsice
 ```
 Pheno   Set     Threshold       R2      P       Coefficient     Standard.Error  Num_SNP
@@ -111,6 +111,9 @@ HG00102 HG00102 Yes 0.00306305513
 HG00103 HG00103 Yes 0.0024911562
 HG00105 HG00105 Yes 0.0062098392
 ```
+### In your working directory you will have output.mismatch and output.log files. Please have a look to these files.
+- The ouput.mismatch file lists SNPs removed because their alleles didn’t match between the base GWAS and the target genotype data.
+
 
 ## Step4: Evaluate Prediction in R
 ```
