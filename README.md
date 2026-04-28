@@ -61,7 +61,7 @@ rs1000031 A G 0.335671 -0.01188 0.03502 0.7345 346070
 --fastscore  \
 --out output 
 ```
-User can include covariate in the model to estimate PGS/PRS by adding following flags
+User can include covariate in the model to estimate PGS/PRS by adding following flags. In this practice we did not consider covariates.
 ```
 --cov covar.txt \
 --cov-col age,sex,PC1-PC10 \
