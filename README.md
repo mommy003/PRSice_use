@@ -1,7 +1,7 @@
 # Genimoic prediction following Clumping and P-value Threasholding using PRSice
 
 ## PBL Scenario 
-Imagine we are part of a research team studying a quantitative trait (e.g., height). We have GWAS summary statistics from a large external study, and you have genotype + phenotype data for a cohort (lets say target dataset). Now the task is to build a polygenic risk score (PRS) and evaluate how well it predicts the trait in target cohort.
+Imagine we are part of a research team studying a quantitative trait (e.g., height). We have GWAS summary statistics from a large external study, and we have genotype + phenotype data for a cohort (lets say target dataset). Now the task is to build a polygenic risk score (PRS) and evaluate how well it predicts the trait in target cohort.
 
 ### Learning outcome
 - Participants will able to predict a phenotype using genome‑wide SNP effects.
@@ -147,11 +147,12 @@ This leads to underfitting and lower R².
 # Wrap‑Up
 - PRSice automates clumping + thresholding.
 - R² peaks at the threshold where the PRS includes enough true causal SNPs to capture polygenicity.
-- PRS performance depends on genetic architecture.
-- PRS is a baseline — not the final model.
+- PRS performance depends on genetic architecture of a trait.
+- PRSice (default flags) is a baseline, not the final model.
 
 ### Furher practice task
 - Change the clumping and p value threasholding parameters and re‑run PRSice.
 - Compare R² and number of SNPs.
 - Check prediction improve or worsen and try to interprete.
+- Try to identify best p value threshold and predict the the phenotype in target dataset.
 - Try Binary phenotype.
