@@ -30,7 +30,7 @@ CHR     SNP              BP     A1      TEST    NMISS   BETA    STAT    P
 1       rs12726255      1039813 G       ADD     2995    -0.07247 -0.1306 0.8961
 1       rs9660710       1089205 A       ADD     2992    0.08227 0.1078  0.9142
 ```
-In our practice will use GWAS summary statistics with the following format (.ma)
+In our practice will use following GWAS summary statistics which is GCTA-COJO format (ukb_matched.ma)
 ```
 SNP A1 A2 freq b se p N
 rs10000010 C T 0.482739 0.01369 0.03341 0.682 340643
