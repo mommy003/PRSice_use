@@ -130,10 +130,11 @@ summary(lm(pheno ~ PRS, data=merged))
 ```
 
 # Q & A
-### Would it be expected to estimate R² as 0.46, as the heriatbilty of simulated phenotype was o.5?
+### Would it be expected to estimate R² as 0.46?
+Please note that heriatbilty of simulated phenotype was 0.5.
 
 ### Would you expect similar R² if you apply p-value thresholding in a another indepentdent dataset?
-Think what would be the justification of your answer
+Think what would be the justification of your answer.
 
 ### What does clumping do?
 Clumping removes SNPs that are in high linkage disequilibrium (LD) with each other, keeping only the most significant SNP in each LD block. So, Clumping keeps independent SNPs and removes correlated ones.
@@ -162,5 +163,5 @@ This leads to underfitting and lower R².
 - Change the clumping and p value threasholding parameters and re‑run PRSice.
 - Compare R² and number of SNPs.
 - Check prediction improve or worsen and try to interprete.
-- Try to identify best p value threshold and predict the the phenotype in target dataset.
+- Try to identify best p value threshold in tuning sample and predict the the phenotype in target dataset.
 - Try Binary phenotype.
