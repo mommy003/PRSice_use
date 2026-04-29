@@ -1,5 +1,9 @@
 # Genimoic prediction following Clumping and P-value Threasholding using PRSice
 
+
+### Phenotype simulation
+We simulated a quantitative phenotype with a heritability of 0.5 captured by 100 causal variants in 348,501 unrelated UKB participants with an European ancestry using [GCTA](https://yanglab.westlake.edu.cn/software/gcta/#GWASSimulation), and performed GWAS with [PLINK 1.9](https://www.cog-genomics.org/plink/1.9/assoc). Using effects of the 100 causal variants simulated, we calculated the phenotype of the 502 EUR participants of the Phase 3 data in the [1000 Genomes Project](https://www.internationalgenome.org/) as the true phenotypes. Polygenic scores will be generated for the 502 participants using the C + PT method implemented in [PRSice](https://choishingwan.github.io/PRSice/) and the SBayesRC method (https://www.nature.com/articles/s41588-024-01704-y) implemented in [GCTB](https://gctbhub.cloud.edu.au/software/gctb/#SBayesRCTutorial). We will go through the two methods and compare the accuracy achieved by the two methods.  
+
 ## PBL Scenario 
 Imagine we are part of a research team studying a quantitative trait (e.g., height). We have GWAS summary statistics from a large external study, and we have genotype + phenotype data for a cohort (lets say target dataset). Now the task is to build a polygenic risk score (PRS) and evaluate how well it predicts the trait in target cohort.
 
@@ -15,9 +19,6 @@ Imagine we are part of a research team studying a quantitative trait (e.g., heig
 - How much variance explained (R²)?
 
 ### To download latest version of PRSice please go to https://choishingwan.github.io/PRSice/ and transfer the folder in your working directory
-
-### Phenotype simulation
-We simulated a quantitative phenotype with a heritability of 0.5 captured by 100 causal variants in 348,501 unrelated UKB participants with an European ancestry using [GCTA](https://yanglab.westlake.edu.cn/software/gcta/#GWASSimulation), and performed GWAS with [PLINK 1.9](https://www.cog-genomics.org/plink/1.9/assoc). Using effects of the 100 causal variants simulated, we calculated the phenotype of the 502 EUR participants of the Phase 3 data in the [1000 Genomes Project](https://www.internationalgenome.org/) as the true phenotypes. Polygenic scores will be generated for the 502 participants using the C + PT method implemented in [PRSice](https://choishingwan.github.io/PRSice/) and the SBayesRC method (https://www.nature.com/articles/s41588-024-01704-y) implemented in [GCTB](https://gctbhub.cloud.edu.au/software/gctb/#SBayesRCTutorial). We will go through the two methods and compare the accuracy achieved by the two methods.   
 
 ## Step1: Prepare base GWAS (Reference) 
 GWAS summary statistics using suitable software (e.g. –linear function in $\color{red}{PLINK}$). Please note that, PRSice needs a clean GWAS summary file with consistent SNP IDs and effect alleles. Typical columns names required as $\color{blue}{SNP}$, $\color{blue}{A1}$, $\color{blue}{A2}$, $\color{blue}{BETA/OR}$, $\color{blue}{P}$, $\color{blue}{N}$. Compress and index GWAS file if large (e.g., bgzip, tabix) for convenience. GWAS output from PLINK could easily be used for culmping and theasholding when using PRSice. Please see the following output as an example
@@ -129,6 +130,11 @@ summary(lm(pheno ~ PRS, data=merged))
 ```
 
 # Q & A
+### Would it be expected to estimate R² as 0.46, as the heriatbilty of simulated phenotype was o.5?
+
+### Would you expect similar R² if you apply p-value thresholding in a another indepentdent dataset?
+Think what would be the justification of your answer
+
 ### What does clumping do?
 Clumping removes SNPs that are in high linkage disequilibrium (LD) with each other, keeping only the most significant SNP in each LD block. So, Clumping keeps independent SNPs and removes correlated ones.
 
