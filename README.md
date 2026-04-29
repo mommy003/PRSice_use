@@ -153,7 +153,7 @@ Loose thresholds include too many non‑associated SNPs, adding noise that dilut
 Strict thresholds include only genome‑wide significant SNPs, missing thousands of small‑effect variants.
 This leads to underfitting and lower R².
 
-# $color{darkblue}{Wrap‑Up}$
+# $\color{darkblue}{Wrap‑Up}$
 - PRSice automates clumping + thresholding.
 - R² peaks at the threshold where the PRS includes enough true causal SNPs to capture polygenicity.
 - PRS performance depends on genetic architecture of a trait.
