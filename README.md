@@ -114,7 +114,7 @@ HG00102 HG00102 Yes 0.00306305513
 HG00103 HG00103 Yes 0.0024911562
 HG00105 HG00105 Yes 0.0062098392
 ```
-### In your working directory you will have output.mismatch and output.log files. Please have a look to these files.
+### In your working directory you will have ```output.mismatch``` and output.log files. Please have a look to these files.
 - The ouput.mismatch file lists SNPs removed because their alleles didn’t match between the base GWAS and the target genotype data.
 - The output.log file is simply a record of what a program did while it was running. 
 
