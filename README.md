@@ -131,7 +131,7 @@ summary(lm(pheno ~ PRS, data=merged))
 
 # Q & A
 ### Would it be expected to estimate R² as 0.46?
-Please note that heriatbilty of simulated phenotype was 0.5.
+Please note that heriatbilty of simulated phenotype was 0.5. As we know from the theory, the upper bound of the R² is the true heritability.
 
 ### Would you expect similar R² if you apply p-value thresholding in a another indepentdent dataset?
 Think what would be the justification of your answer.
