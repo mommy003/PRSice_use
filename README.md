@@ -144,7 +144,7 @@ Please note that heriatbilty of simulated phenotype was 0.5. As we know from the
 ### Would you expect similar R² if you apply p-value thresholding in a another indepentdent dataset?
 Think what would be the justification of your answer.
 
-## $\color{red}{Probable}$ $\color{red}{solutions}$ : Estimate best p value thresholding in tuning sample and applied best threshold to the target sample to see how R² is changing
+## $\color{red}{green}$ $\color{green}{solutions}$ : Estimate best p value thresholding in tuning sample and applied best threshold to the target sample to see how R² is changing
 
 ### Run PRSice on tuneing sample (--keep ind_100)
 ```
