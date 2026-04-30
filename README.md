@@ -146,7 +146,7 @@ Think what would be the justification of your answer.
 
 ## $\color{green}{Probable}$ $\color{green}{solutions}$ : Estimate best p value thresholding in tuning sample and applied best threshold to the target sample to see how R² is changing
 
-### Run PRSice on tuneing sample (--keep ind_100)
+### Run PRSice on tuneing sample (--keep ind_100) to scan threshold and pick best one based on R² 
 ```
 ./PRSice_linux \
 --a1 A1 \
@@ -163,7 +163,7 @@ Think what would be the justification of your answer.
 --out tune
 
 ```
-### Now applied best p value threshold in target dataset 
+### Now recompute PRS and R² by appling best p value threshold in target dataset for final evaluation
 ```
 ./PRSice_linux \
 --a1 A1 \
