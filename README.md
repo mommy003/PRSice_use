@@ -163,7 +163,7 @@ Think what would be the justification of your answer.
 --out tune
 
 ```
-### Now recompute PRS and R² by appling best p value threshold (from ```tune.prsice```) in target dataset for final evaluation
+### Now recompute PRS and R² by appling best p value threshold (from ```tune.prsice```) in target dataset for final evaluation ($\color{green}{out-of-sample}$ $\color{green}{prediction}$)
 ```
 ./PRSice_linux \
 --a1 A1 \
