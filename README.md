@@ -137,15 +137,48 @@ merged <- merge(prs, pheno, by=c("FID","IID"))
 summary(lm(pheno ~ PRS, data=merged))
 
 ```
-# Concerns:  as PRSice eitimates p value threasholdin in the target data set. Might be there is an issue of overfitting.
-
-
+# $\color{blue}{Concerns}$:  as PRSice eitimates p value threasholdin in the target data set. Might be there is an issue of overfitting.
 ### Would it be expected to estimate R² as 0.46?
 Please note that heriatbilty of simulated phenotype was 0.5. As we know from the theory, the upper bound of the R² is the true heritability.
 
 ### Would you expect similar R² if you apply p-value thresholding in a another indepentdent dataset?
 Think what would be the justification of your answer.
 
+## Probable solutions: Estimate best p value thresholding in tuning sample and applied best threshold to the target sample to see how R² is changing
+
+### Run PRSice on tuneing sample (--keep ind_100)
+```
+./PRSice_linux \
+--a1 A1 \
+--base /QRISdata/Q9427/ISG2026/ukb_matched.ma \
+--target /QRISdata/Q9427/ISG2026/validation_1kg/1000G_phase3.eur \
+--pheno /QRISdata/Q9427/ISG2026/validation_1kg/1kg.eur.simulated.phen \
+--keep ind_100 \
+--beta  \
+--pvalue p \
+--stat b \
+--bar-levels 1e-8,1e-7,1e-6,1e-5,3e-5,1e-4,3e-4,0.001,0.003,0.01,0.03,0.1,0.3,1 \
+--binary-target F \
+--fastscore  \
+--out tune
+
+```
+### Now applied best p value threshold in target dataset 
+```
+./PRSice_linux \
+--a1 A1 \
+--base /QRISdata/Q9427/ISG2026/ukb_matched.ma \
+--target /QRISdata/Q9427/ISG2026/validation_1kg/1000G_phase3.eur \
+--pheno /QRISdata/Q9427/ISG2026/validation_1kg/1kg.eur.simulated.phen \
+--keep ind_400 \
+--beta  \
+--bar-levels 1e-8 \
+--pvalue p \
+--stat b \
+--binary-target F \
+--fastscore  \
+--out target
+```
 
 # Q & A
 ### What does clumping do?
