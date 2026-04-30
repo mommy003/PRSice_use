@@ -137,7 +137,7 @@ merged <- merge(prs, pheno, by=c("FID","IID"))
 summary(lm(pheno ~ PRS, data=merged))
 
 ```
-# $\color{red}{Concerns}$:  as PRSice eitimates p value threasholding in the target data set. Might be there is an issue of overfitting [Tutorial of PRS](https://www.nature.com/articles/s41596-020-0353-1)).
+# $\color{red}{Concerns}$:  as PRSice eitimates p value threasholding in the target data set. Might be there is an issue of overfitting [Tutorial of PRS](https://www.nature.com/articles/s41596-020-0353-1).
 ### Would it be expected to estimate R² as 0.46?
 Please note that heriatbilty of simulated phenotype was 0.5. As we know from the theory, the upper bound of the R² is the true heritability.
 
@@ -179,6 +179,7 @@ Think what would be the justification of your answer.
 --fastscore  \
 --out target
 ```
+Now please compare ```tune.prsice``` and ```target.prsice``` and you will see ~5% reduction of accuracy in target cohort. It is extected to be more pronounced if we use larger sample size.
 
 # Q & A
 ### What does clumping do?
