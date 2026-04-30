@@ -163,7 +163,7 @@ Think what would be the justification of your answer.
 --out tune
 
 ```
-### Now recompute PRS and R² by appling best p value threshold in target dataset for final evaluation
+### Now recompute PRS and R² by appling best p value threshold (from ```tune.prsice```) in target dataset for final evaluation
 ```
 ./PRSice_linux \
 --a1 A1 \
@@ -179,7 +179,7 @@ Think what would be the justification of your answer.
 --fastscore  \
 --out target
 ```
-#### Now please compare ```tune.prsice``` and ```target.prsice``` and you will see ~5% reduction of accuracy in target cohort. Difference is extected to be more pronounced if we use larger sample size.
+#### Now please compare ```tune.summary``` and ```target.summary``` and you will see ~5% reduction of accuracy in target cohort. Difference is extected to be more pronounced if we use larger sample size.
 
 # Q & A
 ### What does clumping do?
