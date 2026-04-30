@@ -60,6 +60,7 @@ rs1000031 A G 0.335671 -0.01188 0.03502 0.7345 346070
 --beta  \
 --pvalue p \
 --stat b \
+--bar-levels 1e-8,1e-7,1e-6,1e-5,3e-5,1e-4,3e-4,0.001,0.003,0.01,0.03,0.1,0.3,1 \
 --binary-target F \
 --fastscore  \
 --out output 
@@ -87,32 +88,40 @@ The command will generate following output file
 ### output.prsice
 ```
 Pheno   Set     Threshold       R2      P       Coefficient     Standard.Error  Num_SNP
+-       Base    1e-08   0.477637        1.34891e-72     300.611 14.0591 556
+-       Base    1e-07   0.470579        3.91831e-71     323.059 15.3243 607
+-       Base    1e-06   0.469892        5.42639e-71     352.808 16.7585 673
+-       Base    1e-05   0.465693        3.93348e-70     398.6   19.0941 778
+-       Base    3e-05   0.46452 6.82167e-70     429.676 20.6313 843
+-       Base    0.0001  0.467048        2.07882e-70     467.678 22.3421 923
+-       Base    0.0003  0.466889        2.24114e-70     530.205 25.3373 1060
 -       Base    0.001   0.460142        5.26825e-69     643.511 31.172  1306
--       Base    0.05    0.359991        1.91153e-50     3223.74 192.23  8813
+-       Base    0.003   0.458274        1.25341e-68     883.306 42.949  1834
+-       Base    0.01    0.4341  7.21536e-64     1444.87 73.7767 3188
+-       Base    0.03    0.392045        4.74355e-56     2512.85 139.942 6262
 -       Base    0.1     0.309847        3.26869e-42     4401.03 293.743 14379
--       Base    0.2     0.272322        1.98276e-36     6247.03 456.685 23865
--       Base    0.3     0.25515         7.01947e-34     7688.56 587.485 31775
--       Base    0.4     0.243653        3.31817e-32     8926.01 703.311 38609
--       Base    0.5     0.234101        7.82242e-31     9884.88 799.596 44345
+-       Base    0.3     0.25515 7.01947e-34     7688.56 587.485 31775
 -       Base    1       0.229755        3.25307e-30     13970.2 1143.93 64264
 ```
 ### output.summary
 ```
 Phenotype       Set     Threshold       PRS.R2  Full.R2 Null.R2 Prevalence      Coefficient     Standard.Error  P       Num_SNP
--               Base    0.001   0.460142        0.460142        0       -       643.511            31.172  5.26825e-69     1306
-
+-       Base    1e-08   0.477637        0.477637        0       -       300.611 14.0591 1.34891e-72     556
 
 ```
 ### output.best
 ```
-FID IID In_Regression PRS
-HG00097 HG00097 Yes -0.00209781776
-HG00099 HG00099 Yes -0.0078045559
-HG00100 HG00100 Yes -0.00516328484
-HG00101 HG00101 Yes -0.00330218224
-HG00102 HG00102 Yes 0.00306305513
-HG00103 HG00103 Yes 0.0024911562
-HG00105 HG00105 Yes 0.0062098392
+ID IID In_Regression PRS
+HG00097 HG00097 Yes -0.00578866906
+HG00099 HG00099 Yes -0.0160357914
+HG00100 HG00100 Yes -0.00750251799
+HG00101 HG00101 Yes -0.00859127698
+HG00102 HG00102 Yes 0.00556375899
+HG00103 HG00103 Yes 0.00435764388
+HG00105 HG00105 Yes 0.0153946043
+HG00106 HG00106 Yes -0.00670755396
+HG00107 HG00107 Yes -0.00945971223
+HG00108 HG00108 Yes -0.015742536
 ```
 ### In your working directory you will have output.mismatch and output.log files. Please have a look to these files.
 - The ```output.mismatch``` file lists SNPs removed because their alleles didn’t match between the base GWAS and the target genotype data.
@@ -128,14 +137,17 @@ merged <- merge(prs, pheno, by=c("FID","IID"))
 summary(lm(pheno ~ PRS, data=merged))
 
 ```
+# Concerns:  as PRSice eitimates p value threasholdin in the target data set. Might be there is an issue of overfitting.
 
-# Q & A
+
 ### Would it be expected to estimate R² as 0.46?
 Please note that heriatbilty of simulated phenotype was 0.5. As we know from the theory, the upper bound of the R² is the true heritability.
 
 ### Would you expect similar R² if you apply p-value thresholding in a another indepentdent dataset?
 Think what would be the justification of your answer.
 
+
+# Q & A
 ### What does clumping do?
 Clumping removes SNPs that are in high linkage disequilibrium (LD) with each other, keeping only the most significant SNP in each LD block. So, Clumping keeps independent SNPs and removes correlated ones.
 
