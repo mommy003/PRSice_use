@@ -137,14 +137,14 @@ merged <- merge(prs, pheno, by=c("FID","IID"))
 summary(lm(pheno ~ PRS, data=merged))
 
 ```
-# $\color{blue}{Concerns}$:  as PRSice eitimates p value threasholdin in the target data set. Might be there is an issue of overfitting.
+# $\color{red}{Concerns}$:  as PRSice eitimates p value threasholdin in the target data set. Might be there is an issue of overfitting.
 ### Would it be expected to estimate R² as 0.46?
 Please note that heriatbilty of simulated phenotype was 0.5. As we know from the theory, the upper bound of the R² is the true heritability.
 
 ### Would you expect similar R² if you apply p-value thresholding in a another indepentdent dataset?
 Think what would be the justification of your answer.
 
-## Probable solutions: Estimate best p value thresholding in tuning sample and applied best threshold to the target sample to see how R² is changing
+## $\color{red}{Probable}$ $\color{red}{solutions}$ : Estimate best p value thresholding in tuning sample and applied best threshold to the target sample to see how R² is changing
 
 ### Run PRSice on tuneing sample (--keep ind_100)
 ```
