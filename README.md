@@ -78,7 +78,7 @@ User can include covariate in the model to estimate PGS/PRS by adding following 
 - For binary traits, it will report Nagelkerke R² / AUC; for quantitative traits, R²
 
 ```
---bar-levels 0.001,0.05,0.1,0.2,0.3,0.4,0.5,1 \
+--bar-levels 0.001,0.05,0.1,0.2,0.3,0.4,0.5,1 \ #these bar levels are default
 --clump-kb 250kb \
 --clump-p 1.000000 \
 --clump-r2 0.100000
