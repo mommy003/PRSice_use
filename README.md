@@ -179,7 +179,7 @@ Think what would be the justification of your answer.
 --fastscore  \
 --out target
 ```
-Now please compare ```tune.prsice``` and ```target.prsice``` and you will see ~5% reduction of accuracy in target cohort. Difference is extected to be more pronounced if we use larger sample size.
+#### Now please compare ```tune.prsice``` and ```target.prsice``` and you will see ~5% reduction of accuracy in target cohort. Difference is extected to be more pronounced if we use larger sample size.
 
 # Q & A
 ### What does clumping do?
