@@ -36,14 +36,13 @@ CHR     SNP              BP     A1      TEST    NMISS   BETA    STAT    P
 In our practice will use following GWAS summary statistics which is GCTA-COJO format (e.g. ukb_matched.ma)
 ```
 SNP A1 A2 freq b se p N
-rs10000010 C T 0.482739 0.01369 0.03341 0.682 340643
-rs1000007 C T 0.278497 -0.008524 0.03699 0.8177 345363
-rs10000141 A G 0.090938 0.1598 0.05742 0.005391 347975
-rs1000016 G A 0.066432 -0.0627 0.06689 0.3486 341770
-rs10000169 C T 0.250075 -0.03871 0.03808 0.3094 348501
-rs10000272 C T 0.056848 0.09971 0.07128 0.1618 348501
-rs10000282 T C 0.088018 -0.0006234 0.05836 0.9915 347413
-rs1000031 A G 0.335671 -0.01188 0.03502 0.7345 346070
+rs10000010 C T 0.477993 -0.2796 0.3719 0.4522 2999
+rs10000030 A G 0.135302 -0.09771 0.5496 0.8589 2997
+rs1000007 C T 0.275333 -0.1548 0.4153 0.7094 3000
+rs10000121 G A 0.468092 -0.5717 0.3729 0.1253 2993
+rs10000141 A G 0.087725 0.6495 0.6649 0.3287 2998
+rs1000016 G A 0.068402 0.6553 0.7509 0.3829 2997
+rs10000169 C T 0.250833 -0.1971 0.4317 0.648 3000
 ```
 ## Step2: Prepare target genotype and phenotype files
 - Target file should be PLINK –bfile (target.bed, target.bim, target.fam). Also note that pgen file can also be used. 
@@ -54,7 +53,7 @@ rs1000031 A G 0.335671 -0.01188 0.03502 0.7345 346070
 ```
 ./PRSice_linux \
 --a1 A1 \
---base /QRISdata/Q9427/ISG2026/ukb_matched.ma \
+--base /QRISdata/Q9427/ISG2026/gwas.ma \
 --target /QRISdata/Q9427/ISG2026/validation_1kg/1000G_phase3.eur \
 --pheno /QRISdata/Q9427/ISG2026/validation_1kg/1kg.eur.simulated.phen \
 --beta  \
@@ -88,40 +87,40 @@ The command will generate following output file
 ### output.prsice
 ```
 Pheno   Set     Threshold       R2      P       Coefficient     Standard.Error  Num_SNP
--       Base    1e-08   0.477637        1.34891e-72     300.611 14.0591 556
--       Base    1e-07   0.470579        3.91831e-71     323.059 15.3243 607
--       Base    1e-06   0.469892        5.42639e-71     352.808 16.7585 673
--       Base    1e-05   0.465693        3.93348e-70     398.6   19.0941 778
--       Base    3e-05   0.46452 6.82167e-70     429.676 20.6313 843
--       Base    0.0001  0.467048        2.07882e-70     467.678 22.3421 923
--       Base    0.0003  0.466889        2.24114e-70     530.205 25.3373 1060
--       Base    0.001   0.460142        5.26825e-69     643.511 31.172  1306
--       Base    0.003   0.458274        1.25341e-68     883.306 42.949  1834
--       Base    0.01    0.4341  7.21536e-64     1444.87 73.7767 3188
--       Base    0.03    0.392045        4.74355e-56     2512.85 139.942 6262
--       Base    0.1     0.309847        3.26869e-42     4401.03 293.743 14379
--       Base    0.3     0.25515 7.01947e-34     7688.56 587.485 31775
--       Base    1       0.229755        3.25307e-30     13970.2 1143.93 64264
+-       Base    1e-08   0.36329 5.21757e-51     13.7373 0.813319        16
+-       Base    1e-07   0.399268        2.35661e-57     16.8538 0.924532        21
+-       Base    1e-06   0.420875        2.38487e-61     19.3876 1.01707 25
+-       Base    1e-05   0.440827        3.58456e-65     22.8621 1.15152 31
+-       Base    3e-05   0.428636        8.05541e-63     29.8688 1.54222 43
+-       Base    0.0001  0.430858        3.0278e-63      40.0594 2.05903 62
+-       Base    0.0003  0.350101        9.00969e-49     59.2422 3.60971 121
+-       Base    0.001   0.207611        4.11104e-27     80.7644 7.05633 271
+-       Base    0.003   0.135748        1.36819e-17     116.815 13.1816 645
+-       Base    0.01    0.0796285       1.20641e-10     167.694 25.4965 1794
+-       Base    0.03    0.0520202       2.39184e-07     253.624 48.4193 4859
+-       Base    0.1     0.0327873       4.48802e-05     386.427 93.8621 13663
+-       Base    0.3     0.0102986       0.0229677       418.955 183.673 32836
+-       Base    1       0.00923048      0.0313783       758.556 351.461 68729
 ```
 ### output.summary
 ```
 Phenotype       Set     Threshold       PRS.R2  Full.R2 Null.R2 Prevalence      Coefficient     Standard.Error  P       Num_SNP
--       Base    1e-08   0.477637        0.477637        0       -       300.611 14.0591 1.34891e-72     556
-
+-       Base    1e-05   0.440827        0.440827        0       -       22.8621 1.15152 3.58456e-65     31
 ```
 ### output.best
 ```
-ID IID In_Regression PRS
-HG00097 HG00097 Yes -0.00578866906
-HG00099 HG00099 Yes -0.0160357914
-HG00100 HG00100 Yes -0.00750251799
-HG00101 HG00101 Yes -0.00859127698
-HG00102 HG00102 Yes 0.00556375899
-HG00103 HG00103 Yes 0.00435764388
-HG00105 HG00105 Yes 0.0153946043
-HG00106 HG00106 Yes -0.00670755396
-HG00107 HG00107 Yes -0.00945971223
-HG00108 HG00108 Yes -0.015742536
+FID IID In_Regression PRS
+HG00097 HG00097 Yes 0.415548387
+HG00099 HG00099 Yes 0.221354839
+HG00100 HG00100 Yes 0.207306452
+HG00101 HG00101 Yes 0.471112903
+HG00102 HG00102 Yes 0.335629032
+HG00103 HG00103 Yes 0.255645161
+HG00105 HG00105 Yes 0.229096774
+HG00106 HG00106 Yes -0.0472741935
+HG00107 HG00107 Yes 0.144548387
+HG00108 HG00108 Yes 0.26416129
+HG00109 HG00109 Yes 0.320064516
 ```
 ### In your working directory you will have output.mismatch and output.log files. Please have a look to these files.
 - The ```output.mismatch``` file lists SNPs removed because their alleles didn’t match between the base GWAS and the target genotype data.
@@ -150,7 +149,7 @@ Think what would be the justification of your answer.
 ```
 ./PRSice_linux \
 --a1 A1 \
---base /QRISdata/Q9427/ISG2026/ukb_matched.ma \
+--base /QRISdata/Q9427/ISG2026/gwas.ma \
 --target /QRISdata/Q9427/ISG2026/validation_1kg/1000G_phase3.eur \
 --pheno /QRISdata/Q9427/ISG2026/validation_1kg/1kg.eur.simulated.phen \
 --keep ind_100 \
@@ -167,19 +166,19 @@ Think what would be the justification of your answer.
 ```
 ./PRSice_linux \
 --a1 A1 \
---base /QRISdata/Q9427/ISG2026/ukb_matched.ma \
+--base /QRISdata/Q9427/ISG2026/gwas.ma \
 --target /QRISdata/Q9427/ISG2026/validation_1kg/1000G_phase3.eur \
 --pheno /QRISdata/Q9427/ISG2026/validation_1kg/1kg.eur.simulated.phen \
 --keep ind_400 \
 --beta  \
---bar-levels 1e-8 \
+--bar-levels 1e-6 \
 --pvalue p \
 --stat b \
 --binary-target F \
 --fastscore  \
 --out target
 ```
-#### Now please compare ```tune.summary``` and ```target.summary``` and you will see ~5% reduction of accuracy in target cohort. Difference is extected to be more pronounced if we use larger sample size.
+#### Now please compare ```tune.summary``` and ```target.summary``` and you will see ~16% reduction of accuracy in target cohort. Difference is extected to be changed if we use larger sample size.
 
 # Q & A
 ### What does clumping do?
