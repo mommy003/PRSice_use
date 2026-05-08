@@ -180,9 +180,6 @@ Think what would be the justification of your answer.
 --out target
 ```
 #### Now please compare ```tune.summary``` and ```target.summary```. The R² in the tuning set (0.4927 at p < 1e‑06) decreases to 0.4136 in the target set, reflecting an ~16% reduction in accuracy. Difference is extected to be changed if we use larger sample size.
-<span style="color: green;">
-Now please compare `tune.summary` and `target.summary`. The R² in the tuning set (0.4927 at p < 1e‑06) decreases to 0.4136 in the target set, reflecting an ~16% reduction in accuracy. Difference is expected to be changed if we use larger sample size.
-</span>
 
 # Q & A
 ### What does clumping do?
