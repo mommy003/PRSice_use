@@ -179,7 +179,7 @@ Think what would be the justification of your answer.
 --fastscore  \
 --out target
 ```
-#### $\color{green}{Now}$ $\color{green}{please}$ $\color{green}{compare}$ Now please compare ```tune.summary``` and ```target.summary```. The R² in the tuning set (0.4927 at p < 1e‑06) decreases to 0.4136 in the target set, reflecting an ~16% reduction in accuracy. Difference is extected to be changed if we use larger sample size.
+#### $\color{red}{Now}$ $\color{red}{please}$ $\color{red}{compare}$  ```tune.summary``` and ```target.summary```. The R² in the tuning set (0.4927 at p < 1e‑06) decreases to 0.4136 in the target set, reflecting an ~16% reduction in accuracy. Difference is extected to be changed if we use larger sample size.
 
 # Q & A
 ### What does clumping do?
