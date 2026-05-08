@@ -179,7 +179,7 @@ Think what would be the justification of your answer.
 --fastscore  \
 --out target
 ```
-#### Now please compare ```tune.summary``` where R² is 0.4927 (best threshold p < 1e-06) and ```target.summary``` where R² is 0.4136 (for p < 1e-06). Which means ~16% reduction of accuracy in target cohort. Difference is extected to be changed if we use larger sample size.
+#### Now please compare ```tune.summary``` and ```target.summary```. The R² in the tuning set (0.4927 at p < 1e‑06) decreases to 0.4136 in the target set, reflecting an ~16% reduction in accuracy. Difference is extected to be changed if we use larger sample size.
 
 # Q & A
 ### What does clumping do?
