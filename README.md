@@ -71,7 +71,7 @@ User can include covariate in the model to estimate PGS/PRS by adding following 
 --cov-col age,sex,PC1-PC10 \
 ```
 
-## Aforementioned basic PRSice basic (without covariate) command will automatically enable clumping and P value thresholding
+## Aforementioned basic PRSice (without covariate) command will automatically enable clumping and P value thresholding
 - Use PRSice’s built in clumping and multiple thresholds to scan prediction performance.
 - Key flags: --clump-kb, --clump-r2, --clump-p, --bar-levels 
 - PRSice will compute PRS at each threshold and test association with the phenotype
@@ -137,7 +137,7 @@ merged <- merge(prs, pheno, by=c("FID","IID"))
 summary(lm(pheno ~ PRS, data=merged))
 
 ```
-# $\color{red}{Concerns}$:  as PRSice eitimates p value threasholding in the target data set. Might be there is an issue of overfitting [Tutorial of PRS](https://www.nature.com/articles/s41596-020-0353-1)
+## $\color{red}{Concerns}$:  as PRSice eitimates p value threasholding in the target data set. Might be there is an issue of overfitting [Tutorial of PRS](https://www.nature.com/articles/s41596-020-0353-1)
 ### Would it be expected to estimate R² as 0.46?
 Please note that heriatbilty of simulated phenotype was 0.5. As we know from the theory, the upper bound of the R² is the true heritability.
 
@@ -179,7 +179,7 @@ Think what would be the justification of your answer.
 --fastscore  \
 --out target
 ```
-#### Now please compare ```tune.summary``` and ```target.summary``` and you will see ~16% reduction of accuracy in target cohort. Difference is extected to be changed if we use larger sample size.
+#### $\color{red}{Now}$ $\color{red}{please}$ $\color{red}{compare}$  ```tune.summary``` and ```target.summary```. The R² in the tuning set (0.4927 at p < 1e‑06) decreases to 0.4136 in the target set, reflecting an ~16% reduction in accuracy. Difference is extected to be changed if we use larger sample size.
 
 # Q & A
 ### What does clumping do?
